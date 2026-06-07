@@ -12,7 +12,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        return Categoria::all();
+        return Producto::all();
     }
 
     /**
@@ -20,8 +20,8 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        $categoria = Categoria::create($request->all());
-        return response()->json($categoria, 201);
+       $producto = Producto::create($request->all());
+       return response()->json($producto, 201);
     }
 
     /**

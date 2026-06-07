@@ -12,7 +12,8 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-       return Producto::all();
+        return Categoria::all();
+       
     }
 
     /**
@@ -20,8 +21,8 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-       $producto = Producto::create($request->all());
-       return response()->json($producto, 201);
+       $categoria = Categoria::create($request->all());
+        return response()->json($categoria, 201); 
     }
     /**
      * Display the specified resource.
